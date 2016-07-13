@@ -24,7 +24,7 @@ class MysqliDatabase
 	 * 
 	 * @param	mysqli	$mysqli	mysqli object
 	 */
-	function __construct(mysqli $mysqli) {
+	function __construct(\mysqli $mysqli) {
 		$this->_mysqli = $mysqli;
 	}
 
