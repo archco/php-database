@@ -1,6 +1,6 @@
 {
     "name": "cosmos/php-database",
-    "description": "Helper to use MySQL database",
+    "description": "Help to use MySQL database",
     "version": "0.1.0",
     "type": "library",
     "license": "MIT",
