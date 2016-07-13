@@ -6,7 +6,7 @@
  * @author cosmos <archcoster@gmail.com>
  * @license MIT
  */
-namespace Cosmos\MysqliDatabase;
+namespace cosmos\database;
 
 class MysqliDatabase
 {
@@ -22,7 +22,7 @@ class MysqliDatabase
 	/**
 	 * __construct
 	 * 
-	 * @param mysqli $mysqli mysqli object
+	 * @param	mysqli	$mysqli	mysqli object
 	 */
 	function __construct(mysqli $mysqli) {
 		$this->_mysqli = $mysqli;
@@ -31,7 +31,7 @@ class MysqliDatabase
 	/**
 	 * stat 
 	 * 현재 mysqli system 상태를 return
-	 * @return string server 상태에 대한 서술. 에러면 FALSE.
+	 * @return	string	server상태에 대한 서술. 에러면 FALSE.
 	 */
 	public function stat() {
 		return $this->_mysqli->stat();
@@ -40,9 +40,9 @@ class MysqliDatabase
 	/**
 	 * insert 
 	 * 해당 table 에 하나의 row 를 insert.
-	 * @param  string $table  table_name
-	 * @param  array $values content values (associate array)
-	 * @return integer 	insert_id, 에러면 -1
+	 * @param	string	$table	table_name
+	 * @param	array	$values	content values (associative array)
+	 * @return	integer		insert_id, 에러면 -1
 	 */
 	public function insert($table, $values) {
 		// generate query
@@ -64,10 +64,10 @@ class MysqliDatabase
 	/**
 	 * delete
 	 * 해당하는 rows 를 table 에서 삭제.
-	 * @param  string $table       table name
-	 * @param  string $whereClause WHERE 를 제외한 WHERE clause, null 이면 모든 rows 삭제(주의)
-	 * @param  array $whereArgs   whereClause 에서 ? 를 사용했을시의 arguments (numeric array)
-	 * @return integer	영향받은 row 의 수, 0이면 해당사항없음, 에러면 -1
+	 * @param	string	$table	table name
+	 * @param	string	$whereClause	WHERE를 제외한 WHERE clause, null이면 모든 rows 삭제(주의)
+	 * @param	array	$whereArgs	whereClause에서 ?를 사용했을시의 arguments (numeric array)
+	 * @return	integer	영향받은 row의 수, 0이면 해당사항없음, 에러면 -1
 	 */
 	public function delete($table, $whereClause, $whereArgs) {
 		// generate query
@@ -87,11 +87,11 @@ class MysqliDatabase
 	/**
 	 * update
 	 * 해당하는 rows 를 update.
-	 * @param  string 	$table 	table name
-	 * @param  array 	$values 	content values (associative array)
-	 * @param  string 	$whereClause WHERE 를 제외한 WHERE clause, null 로 할시 모든 rows 가 수정됨(주의!)
-	 * @param  array 	$whereArgs   whereClause 에서 ?를 사용할 시의 argument (numeric array)
-	 * @return integer 	영향받은 row 의 수, 0은 없음, -1은 에러
+	 * @param	string	$table	table name
+	 * @param	array	$values	content values (associative array)
+	 * @param	string	$whereClause WHERE를 제외한 WHERE clause, null 로할시 모든 rows가 수정됨(주의!)
+	 * @param	array	$whereArgs	whereClause에서 ?를 사용할 시의 argument (numeric array)
+	 * @return	integer		영향받은 row의 수, 0은 없음, -1은 에러
 	 */
 	public function update($table, $values, $whereClause, $whereArgs) {
 		// generate query

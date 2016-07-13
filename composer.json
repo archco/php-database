@@ -1,0 +1,16 @@
+{
+    "name": "cosmos/mysqli-database",
+    "description": "Helper to use mysqli class",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jinyong Kim",
+            "email": "archcoster@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0"
+    }
+}
