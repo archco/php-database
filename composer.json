@@ -1,6 +1,6 @@
 {
-    "name": "cosmos/mysqli-database",
-    "description": "Helper to use mysqli class",
+    "name": "cosmos/php-database",
+    "description": "Helper to use MySQL database",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,5 +12,10 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cosmos\\PHPDatabase\\": "src/"
+        }
     }
 }
